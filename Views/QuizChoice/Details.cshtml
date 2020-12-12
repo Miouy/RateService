@@ -1,0 +1,42 @@
+﻿@model rateservice.Models.QuizChoice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuizChoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quiz.QuizTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quiz.QuizTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCorrectChoice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCorrectChoice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuizChoiceText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuizChoiceText)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

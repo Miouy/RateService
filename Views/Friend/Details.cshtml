@@ -1,0 +1,42 @@
+﻿@model rateservice.Models.Friend
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Friend</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fuser.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fuser.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FriendDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FriendDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

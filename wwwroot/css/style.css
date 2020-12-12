@@ -1,0 +1,10 @@
+﻿.b-red{
+    background-color:red;
+}
+
+.thumb-post {
+    background-size: auto 300px !important;
+    height: 300px;
+    width: 300px;
+    border-radius: 50% !important;
+}

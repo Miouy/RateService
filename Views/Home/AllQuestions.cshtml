@@ -1,0 +1,57 @@
+﻿@model IEnumerable<rateservice.Models.Question>
+
+@{
+    ViewBag.Title = "ViewAllQuestions";
+    Layout = null;
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ForFriends)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionIsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAnonymously)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ForFriends)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionIsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAnonymously)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+        </tr>
+    }
+
+</table>

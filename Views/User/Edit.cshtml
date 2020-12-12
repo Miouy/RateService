@@ -1,0 +1,46 @@
+﻿@model rateservice.Models.User
+
+@{
+    ViewBag.Title = "User_edit";
+}
+
+<h2>User_edit @ViewBag.User.FirstName</h2>
+
+<div>
+    <h3>Edit User</h3>
+    <form method="post">
+        <input type="hidden" name="UserId" value="@ViewBag.User.Id" />
+
+        <div class="form-group">
+            <label>Last_name</label>
+            <input type="text" class="form-control" name="LastName" value="@ViewBag.User.LastName">
+        </div>
+        <div class="form-group">
+            <label>First_name</label>
+            <input type="text" class="form-control" name="FirstName" value="@ViewBag.User.FirstName">
+        </div>
+        <div class="form-group">
+            <label>Birth date</label>
+            <input type="date" class="form-control" name="BirthDate" value="@ViewBag.User.BirthDate.ToString("yyyy-MM-dd")">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="Email" value="@ViewBag.User.Email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" name="Password" value="@ViewBag.User.Password">
+        </div>
+        <div class="form-group">
+            <label>Picture</label>
+            <input type="text" class="form-control" name="Picture" value="@ViewBag.User.Picture">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

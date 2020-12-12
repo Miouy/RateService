@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<h2>Index</h2>
+@if (User.Identity.IsAuthenticated)
+{
+    <h2>@User.Identity.Name</h2>
+    <img src="@ViewBag.CurrentUser.Picture" />
+}
+
